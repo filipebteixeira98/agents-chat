@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Environment variables / Secrets
+.env
+.env.*
+*.pem
+
+# Production build outputs (if using TypeScript/Babel)
+dist/
+build/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
