@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@fastify/cors": "^11.2.0",
+    "drizzle-orm": "^0.45.2",
     "fastify": "^5.10.0",
     "fastify-type-provider-zod": "^7.0.0",
     "postgres": "^3.4.9",
@@ -9,6 +10,7 @@
   "devDependencies": {
     "@biomejs/biome": "^2.5.2",
     "@types/node": "^26.1.0",
+    "drizzle-kit": "^0.31.10",
     "typescript": "^6.0.3",
     "ultracite": "^7.9.0"
   },
