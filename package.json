@@ -1,24 +1,28 @@
 {
-  "name": "server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node --env-file .env --experimental-strip-types --no-warnings src/server.ts",
-    "dev": "node --env-file .env --experimental-strip-types --no-warnings --watch src/server.ts"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module",
-  "devDependencies": {
-    "@types/node": "^26.1.0",
-    "typescript": "^6.0.3"
-  },
   "dependencies": {
     "@fastify/cors": "^11.2.0",
     "fastify": "^5.10.0",
     "fastify-type-provider-zod": "^7.0.0",
     "zod": "^4.4.3"
-  }
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.2",
+    "@types/node": "^26.1.0",
+    "typescript": "^6.0.3",
+    "ultracite": "^7.9.0"
+  },
+  "name": "server",
+  "scripts": {
+    "start": "node --env-file .env --experimental-strip-types --no-warnings src/server.ts",
+    "dev": "node --env-file .env --experimental-strip-types --no-warnings --watch src/server.ts",
+    "check": "ultracite check",
+    "fix": "ultracite fix"
+  },
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
