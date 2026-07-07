@@ -8,6 +8,6 @@ export const audioChunks = pgTable('audio-chunks', {
     .references(() => rooms.id)
     .notNull(),
   transcription: text().notNull(),
-  embeddings: vector({ dimensions: 768 }).notNull(),
+  embeddings: vector({ dimensions: 3072 }).notNull(),
   createdAt: timestamp().defaultNow().notNull(),
 })
