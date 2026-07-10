@@ -1,96 +1,98 @@
-# Agents API
+# 🤖 Agents API
 
-DESCRIÇÃO DO PROJETO
+Agents API is a backend service for an AI-assisted classroom Q&A application. Users can create and access rooms, upload class audio, store transcriptions with vector embeddings, and ask questions that are answered from the most relevant parts of the recorded class content.
 
-## 🚀 Tecnologias
+## 🚀 Technologies
 
-- **Node.js** com TypeScript nativo (experimental strip types)
-- **Fastify** - Framework web rápido e eficiente
-- **PostgreSQL** com extensão **pgvector** para vetores
+- **Node.js** with native TypeScript support (experimental strip types)
+- **Fastify** - Fast and efficient web framework
+- **PostgreSQL** with the **pgvector** extension for vector storage
 - **Drizzle ORM** - Type-safe database operations
 - **Zod** - Schema validation
-- **Docker** - Containerização do banco de dados
-- **Biome** - Linting e formatação de código
+- **Docker** - Database containerization
+- **Biome** - Code linting and formatting
 
-## 🏗️ Arquitetura
+## 🏗️ Architecture
 
-O projeto segue uma arquitetura modular com:
+The project follows a modular architecture with:
 
-- **Separação de responsabilidades** entre rotas, schemas e conexão com banco
-- **Validação de schemas** com Zod para type safety
-- **ORM type-safe** com Drizzle para operações de banco de dados
-- **Validação de variáveis de ambiente** centralizadas
+- **Separation of concerns** between routes, schemas, services, and database connection
+- **Schema validation** with Zod for type safety
+- **Type-safe ORM** with Drizzle for database operations
+- **Centralized environment variable validation**
+- **AI services** isolated from HTTP route handlers
 
-## ⚙️ Setup e Configuração
+## ⚙️ Setup and Configuration
 
-### Pré-requisitos
+### Prerequisites
 
-- Node.js (versão com suporte a `--experimental-strip-types`)
-- Docker e Docker Compose
+- Node.js with support for `--experimental-strip-types`
+- Docker and Docker Compose
 
-### 1. Clone o repositório
+### 1. Clone the repository
 
 ```bash
-git clone <url-do-repositorio>
+git clone <repository-url>
 cd server
 ```
 
-### 2. Configure o banco de dados
+### 2. Start the database
 
 ```bash
 docker-compose up -d
 ```
 
-### 3. Configure as variáveis de ambiente
+### 3. Configure environment variables
 
-Crie um arquivo `.env` na raiz do projeto:
+Create a `.env` file in the project root:
 
 ```env
 PORT=3333
 DATABASE_URL=postgresql://docker:docker@localhost:5432/agents
+GEMINI_API_KEY=your-google-ai-studio-api-key
 ```
 
-### 4. Instale as dependências
+### 4. Install dependencies
 
 ```bash
 npm install
 ```
 
-### 5. Execute as migrações do banco
+### 5. Run database migrations
 
 ```bash
 npx drizzle-kit migrate
 ```
 
-### 6. (Opcional) Popule o banco com dados de exemplo
+### 6. (Optional) Seed the database with sample data
 
 ```bash
 npm run db:seed
 ```
 
-### 7. Execute o projeto
+### 7. Run the project
 
-**Desenvolvimento:**
+**Development:**
 
 ```bash
 npm run dev
 ```
 
-**Produção:**
+**Production:**
 
 ```bash
 npm start
 ```
 
-## 📚 Scripts Disponíveis
+## 📚 Available Scripts
 
-- `npm run dev` - Executa o servidor em modo de desenvolvimento com hot reload
-- `npm start` - Executa o servidor em modo de produção
-- `npm run db:seed` - Popula o banco de dados com dados de exemplo
+- `npm run dev` - Runs the server in development mode with hot reload
+- `npm start` - Runs the server in production mode
+- `npm run db:seed` - Seeds the database with sample data
 
 ## 🌐 Endpoints
 
-A API estará disponível em `http://localhost:3333`
+The API will be available at `http://localhost:3333`
 
-- `GET /health` - Health check da aplicação
-- `GET /rooms` - Lista as salas disponíveis
+- `GET /health` - Application health check
+- `GET /rooms` - Lists available rooms
