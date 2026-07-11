@@ -1,5 +1,30 @@
 # 🤖 Agents API
 
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/filipebteixeira98/agents-chat?color=dddddd&style=flat-square">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/filipebteixeira98/agents-chat?color=dddddd&style=flat-square">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/filipebteixeira98/agents-chat?color=dddddd&style=flat-square">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/filipebteixeira98/agents-chat?color=dddddd&style=flat-square">
+  <img alt="GitHub stars" src="https://img.shields.io/github/stars/filipebteixeira98/agents-chat?color=dddddd&style=flat-square">
+  <img alt="GitHub forks" src="https://img.shields.io/github/forks/filipebteixeira98/agents-chat?color=dddddd&style=flat-square">
+  <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/filipebteixeira98/agents-chat?color=dddddd&style=flat-square">
+</p>
+
+<p align="center">
+  <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-project">Architecture</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-endpoints">Endpoints</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-license">License</a>
+</p>
+
+<p align="center">
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=dddddd&labelColor=808090">
+</p>
+
+<p align="center">
+  <img alt="agents-chat" src=".github/mockup.png" width="100%">
+</p>
+
 Agents API is a backend service for an AI-assisted classroom Q&A application. Users can create and access rooms, upload class audio, store transcriptions with vector embeddings, and ask questions that are answered from the most relevant parts of the recorded class content.
 
 ## 🚀 Technologies
@@ -96,3 +121,15 @@ The API will be available at `http://localhost:3333`
 
 - `GET /health` - Application health check
 - `GET /rooms` - Lists available rooms
+
+## 🫶 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📝 License
+
+This project is under the MIT license.
+
+<p align="center">
+  Made with ♥ by me
+</p>
